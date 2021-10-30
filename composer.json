@@ -1,0 +1,44 @@
+{
+    "name": "tobento/service-dir",
+    "type": "library",
+    "description": "A directory manager for PHP applications.",
+    "keywords": [
+        "tobento",
+        "package",
+        "php",
+        "directories",
+        "directory manager"
+    ],
+    "homepage": "https://www.tobento.ch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Strub",
+            "email": "info@tobento.ch",
+            "homepage": "https://www.tobento.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.0"
+    },    
+    "autoload": {
+        "psr-4": {
+            "Tobento\\Service\\Dir\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tobento\\Service\\Dir\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --colors=always",
+        "psalm": "vendor/bin/psalm"
+    }
+}
